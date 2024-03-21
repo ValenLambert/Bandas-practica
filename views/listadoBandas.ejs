@@ -1,0 +1,22 @@
+
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<main>
+    <h1>Listado bandas:</h1>
+    <ul>
+        <% for( let i = 0; i < lista.length; i++ ) { %>
+        <a href="http://localhost:3000/bands/id/<%= lista[i].id %>">Nombre: <%= lista[i].nombre %></a>      
+        <li> Top Canciones: <%=lista[i].topCanciones %></li>
+        <li> Cover: </li>
+        <img src="/<%= lista[i].cover %>" alt="Cover Image">
+        <iframe width="560" height="315" src="<%=lista[i].video %>" frameborder="0" allowfullscreen></iframe>
+        <li> <a href="<%=lista[i].video %>">Link a video</a> </li>
+
+
+        <br>
+        <% } %>
+    </ul>
+</main>
+
+<%- include('./partials/footer') %>

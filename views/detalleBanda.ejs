@@ -1,0 +1,21 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<main>
+    <h1>Detalle de <%=lista.nombre %></h1>
+    <ul>
+        <li> Nombre: <%=lista.nombre %></li>
+        <li> Integrantes: <%=lista.integrantes %></li>
+        <li><a href="http://localhost:3000/bands/genero/<%=lista.genero %>">Genero:</a></li>
+        <li> Top Canciones: <%=lista.topCanciones %></li>
+        <li> Cover:</li>
+        <img src="/<%= lista.cover %>" alt="Cover Image">
+        <li> Id: <%=lista.id %></li>
+        <iframe width="560" height="315" src="<%=lista.video %>" frameborder="0" allowfullscreen></iframe>
+        <li> <a href="<%=lista.video %>">Link a video</a> </li>
+
+        <br>
+    </ul>
+</main>
+
+<%- include('./partials/footer') %>
